@@ -11,7 +11,7 @@ This application implements an algorithm to find the longest strictly increasing
 - Interactive console interface
 - Command-line argument support for automated testing
 - Efficient algorithm for finding longest increasing subsequences
-- Comprehensive unit tests
+- Comprehensive unit tests with **code coverage reporting**
 - Docker support for easy deployment
 - **Code linting and analysis** with StyleCop and .NET analyzers
 
@@ -57,6 +57,9 @@ dotnet run --project LongestSequenceSolution.csproj -- 6 1 5 9 2
 
 # Run tests
 dotnet test
+
+# Run tests with code coverage
+.\run-coverage.ps1
 ```
 
 ### Using Docker
@@ -134,6 +137,33 @@ dotnet build /p:TreatWarningsAsErrors=true
 
 For detailed information about code linting, see [LINTING.md](LINTING.md).
 
+## Code Coverage
+
+This project includes comprehensive code coverage reporting using **Coverlet** and **ReportGenerator**.
+
+### Run Coverage Report
+```powershell
+# Windows - Full HTML report
+.\run-coverage.ps1
+
+# Windows - Quick console summary
+.\quick-coverage.ps1
+
+# Linux/Mac
+./run-coverage.sh
+```
+
+### Manual Coverage
+```bash
+# Run tests with coverage
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
+# Generate HTML report
+reportgenerator -reports:"**/coverage.opencover.xml" -targetdir:"CoverageReport" -reporttypes:"Html"
+```
+
+For detailed coverage documentation, see [COVERAGE.md](COVERAGE.md).
+
 ## Usage Examples
 
 ### Command-Line Mode (Automated Testing)
@@ -183,7 +213,11 @@ LongestSequenceSolution/
 ├── .gitignore                   # Git ignore patterns
 ├── .editorconfig                # Code style configuration
 ├── stylecop.json                # StyleCop settings
+├── run-coverage.ps1             # Coverage report script (Windows)
+├── run-coverage.sh              # Coverage report script (Linux/Mac)
+├── quick-coverage.ps1           # Quick coverage check
 ├── LINTING.md                   # Code linting documentation
+├── COVERAGE.md                  # Code coverage documentation
 └── TestProject1/
     ├── SubsequenceFinderTests.cs
     └── LongestSequenceSolutionTests.csproj
@@ -202,6 +236,9 @@ dotnet test --logger "console;verbosity=detailed"
 
 # Run tests with coverage
 dotnet test /p:CollectCoverage=true
+
+# Generate full coverage report
+.\run-coverage.ps1
 ```
 
 ## Docker Testing Scenarios
@@ -249,6 +286,13 @@ This is a **console application**, not a web application:
 - ❌ No browser access
 - ✅ Runs via command line with arguments or interactive input
 - ✅ Perfect for automated testing and scripting
+
+## Documentation
+
+- **[README.md](README.md)** - This file, project overview
+- **[LINTING.md](LINTING.md)** - Code linting and analysis guide
+- **[COVERAGE.md](COVERAGE.md)** - Code coverage reporting guide
+- **[LINTING_QUICKREF.md](LINTING_QUICKREF.md)** - Quick reference for linting
 
 ## License
 
