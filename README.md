@@ -13,6 +13,7 @@ This application implements an algorithm to find the longest strictly increasing
 - Efficient algorithm for finding longest increasing subsequences
 - Comprehensive unit tests
 - Docker support for easy deployment
+- **Code linting and analysis** with StyleCop and .NET analyzers
 
 ## Prerequisites
 
@@ -114,6 +115,25 @@ docker compose down
 docker build -f Dockerfile.test -t longest-sequence-solution-test .
 ```
 
+## Code Quality and Linting
+
+This project uses **StyleCop Analyzers** and **.NET Code Analyzers** to enforce code quality standards.
+
+### Build with Code Analysis
+```bash
+# Standard build with warnings
+dotnet build
+
+# Strict mode (treat warnings as errors)
+dotnet build /p:TreatWarningsAsErrors=true
+```
+
+### Configuration Files
+- `.editorconfig` - Code style rules and naming conventions
+- `stylecop.json` - StyleCop-specific settings
+
+For detailed information about code linting, see [LINTING.md](LINTING.md).
+
 ## Usage Examples
 
 ### Command-Line Mode (Automated Testing)
@@ -153,17 +173,20 @@ Explanation: The longest increasing subsequence is `[1, 5, 9]` with length 3.
 
 ```
 LongestSequenceSolution/
-??? Program.cs                    # Main entry point
-??? SubsequenceFinder.cs         # Core algorithm implementation
-??? LongestSequenceSolution.csproj
-??? Dockerfile                    # Docker configuration
-??? Dockerfile.test              # Docker test configuration
-??? docker-compose.yml           # Docker Compose configuration
-??? .dockerignore                # Docker ignore patterns
-??? .gitignore                   # Git ignore patterns
-??? TestProject1/
-    ??? SubsequenceFinderTests.cs
-    ??? LongestSequenceSolutionTests.csproj
+├── Program.cs                    # Main entry point
+├── SubsequenceFinder.cs         # Core algorithm implementation
+├── LongestSequenceSolution.csproj
+├── Dockerfile                    # Docker configuration
+├── Dockerfile.test              # Docker test configuration
+├── docker-compose.yml           # Docker Compose configuration
+├── .dockerignore                # Docker ignore patterns
+├── .gitignore                   # Git ignore patterns
+├── .editorconfig                # Code style configuration
+├── stylecop.json                # StyleCop settings
+├── LINTING.md                   # Code linting documentation
+└── TestProject1/
+    ├── SubsequenceFinderTests.cs
+    └── LongestSequenceSolutionTests.csproj
 ```
 
 ## Testing
@@ -222,10 +245,10 @@ Get-Content input.txt | ForEach-Object {
 ## Differences from Web Applications
 
 This is a **console application**, not a web application:
-- ? No port mapping needed (no `-p 8080:80`)
-- ? No browser access
-- ? Runs via command line with arguments or interactive input
-- ? Perfect for automated testing and scripting
+- ❌ No port mapping needed (no `-p 8080:80`)
+- ❌ No browser access
+- ✅ Runs via command line with arguments or interactive input
+- ✅ Perfect for automated testing and scripting
 
 ## License
 
