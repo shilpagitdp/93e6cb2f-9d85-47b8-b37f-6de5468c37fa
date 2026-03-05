@@ -1,0 +1,60 @@
+# Docker ignore file for .NET projects
+# Ignore build outputs and temporary files
+
+# .NET build outputs
+**/bin/
+**/obj/
+**/out/
+
+# Visual Studio / Visual Studio Code
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+.vshistory/
+
+# Test results
+TestResults/
+**/TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+**/.dockerignore
+**/Dockerfile*
+**/docker-compose*
+
+# Documentation and misc
+README.md
+LICENSE
+*.md
+
+# IDE
+.idea/
+*.sln.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test projects (optional - uncomment if you don't want to include tests in the image)
+# **/TestProject1/
+# **/*Tests/
+# **/*.Tests/
+
+# Log files
+*.log
+logs/
