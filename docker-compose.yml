@@ -10,7 +10,5 @@ services:
     stdin_open: true  # Enable interactive mode (docker run -i)
     tty: true         # Enable pseudo-TTY (docker run -t)
     environment:
-      - DOTNET_ENVIRONMENT=Production
-    # Uncomment to mount a volume for input/output files if needed
-    # volumes:
-    #   - ./data:/app/data
+      - DOTNET_ENVIRONMENT=Development
+
