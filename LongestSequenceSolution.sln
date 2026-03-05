@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceSolution", "LongestSequenceSolution.csproj", "{3675E241-9D85-4824-90B3-FDC131E7864D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceSolutionTests", "..\TestProject1\LongestSequenceSolutionTests.csproj", "{DCE1E769-CC18-48D7-A02E-C8DB31304C42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3675E241-9D85-4824-90B3-FDC131E7864D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3675E241-9D85-4824-90B3-FDC131E7864D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3675E241-9D85-4824-90B3-FDC131E7864D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3675E241-9D85-4824-90B3-FDC131E7864D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE1E769-CC18-48D7-A02E-C8DB31304C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE1E769-CC18-48D7-A02E-C8DB31304C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE1E769-CC18-48D7-A02E-C8DB31304C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE1E769-CC18-48D7-A02E-C8DB31304C42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04AA3D88-A9C4-4010-B5F3-848B518A7D85}
+	EndGlobalSection
+EndGlobal
