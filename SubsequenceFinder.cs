@@ -1,13 +1,11 @@
-﻿namespace SequenceAlgorithm
+namespace SequenceAlgorithm
 {
     public static class SubsequenceFinder
     {
         public static int[] FindLongestIncreasingSubsequence(IReadOnlyList<int> numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException(nameof(numbers));
-            }
+            ArgumentNullException.ThrowIfNull(numbers);
+            
             int n = numbers.Count;
             if (n == 0)
             {
